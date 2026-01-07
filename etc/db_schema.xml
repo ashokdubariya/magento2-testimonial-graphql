@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ashok. All rights reserved.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="ashok_testimonial" resource="default" engine="innodb" comment="Ashok Testimonial Table">
+        <column xsi:type="int" name="testimonial_id" unsigned="true" nullable="false" identity="true" comment="Testimonial ID"/>
+        <column xsi:type="varchar" name="customer_name" nullable="false" length="255" comment="Customer Name"/>
+        <column xsi:type="varchar" name="customer_email" nullable="false" length="255" comment="Customer Email"/>
+        <column xsi:type="text" name="message" nullable="false" comment="Testimonial Message"/>
+        <column xsi:type="smallint" name="rating" unsigned="true" nullable="false" default="5" comment="Rating (1-5)"/>
+        <column xsi:type="smallint" name="status" unsigned="true" nullable="false" default="0" comment="Status (0=Disabled, 1=Enabled)"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="testimonial_id"/>
+        </constraint>
+        <index referenceId="DEVELOPER_TESTIMONIAL_STATUS" indexType="btree">
+            <column name="status"/>
+        </index>
+        <index referenceId="DEVELOPER_TESTIMONIAL_RATING" indexType="btree">
+            <column name="rating"/>
+        </index>
+        <index referenceId="DEVELOPER_TESTIMONIAL_CREATED_AT" indexType="btree">
+            <column name="created_at"/>
+        </index>
+    </table>
+</schema>

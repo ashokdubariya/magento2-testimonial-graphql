@@ -1,0 +1,50 @@
+<?php
+/**
+ * @var \Ashok\Testimonial\Block\TestimonialList $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+$testimonials = $block->getTestimonials();
+?>
+
+<div class="testimonials-page">
+    <?php /* <div class="page-title-wrapper">
+        <h1 class="page-title">
+            <span class="base"><?= $escaper->escapeHtml(__('Customer Testimonials')) ?></span>
+        </h1>
+    </div> */ ?>
+
+    <div class="testimonials-actions">
+        <a href="<?= $escaper->escapeUrl($block->getSubmitUrl()) ?>" class="action primary">
+            <span><?= $escaper->escapeHtml(__('Submit Your Testimonial')) ?></span>
+        </a>
+    </div>
+
+    <?php if ($testimonials->getSize()): ?>
+        <div class="testimonials-list">
+            <?php foreach ($testimonials as $testimonial): ?>
+                <div class="testimonial-item">
+                    <div class="testimonial-header">
+                        <div class="customer-info">
+                            <span class="customer-name">
+                                <?= $escaper->escapeHtml($testimonial->getCustomerName()) ?>
+                            </span>
+                            <div class="rating">
+                                <?= $block->getRatingStars((int)$testimonial->getRating()) ?>
+                            </div>
+                        </div>
+                        <div class="testimonial-date">
+                            <?= $escaper->escapeHtml($block->formatDate($testimonial->getCreatedAt(), \IntlDateFormatter::MEDIUM)) ?>
+                        </div>
+                    </div>
+                    <div class="testimonial-message">
+                        <p><?= $escaper->escapeHtml($testimonial->getMessage()) ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <div class="message info empty">
+            <div><?= $escaper->escapeHtml(__('No testimonials available yet. Be the first to share your experience!')) ?></div>
+        </div>
+    <?php endif; ?>
+</div>

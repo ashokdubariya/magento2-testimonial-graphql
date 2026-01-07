@@ -1,0 +1,91 @@
+type Query {
+    testimonials(
+        currentPage: Int = 1
+        pageSize: Int = 10
+        filter: TestimonialFilterInput @doc(description: "Filter testimonials")
+    ): TestimonialsOutput @resolver(class: "Ashok\\Testimonial\\Model\\Resolver\\Testimonials") @doc(description: "Get list of testimonials with pagination and filtering")
+    
+    testimonial(
+        id: Int! @doc(description: "Testimonial ID")
+    ): TestimonialOutput @resolver(class: "Ashok\\Testimonial\\Model\\Resolver\\Testimonial") @doc(description: "Get testimonial by ID")
+}
+
+type Mutation {
+    addTestimonial(
+        input: AddTestimonialInput! @doc(description: "Testimonial input data")
+    ): AddTestimonialOutput @resolver(class: "Ashok\\Testimonial\\Model\\Resolver\\AddTestimonial") @doc(description: "Add a new testimonial")
+    
+    updateTestimonial(
+        id: Int! @doc(description: "Testimonial ID to update")
+        input: UpdateTestimonialInput! @doc(description: "Updated testimonial data")
+    ): UpdateTestimonialOutput @resolver(class: "Ashok\\Testimonial\\Model\\Resolver\\UpdateTestimonial") @doc(description: "Update an existing testimonial")
+    
+    deleteTestimonial(
+        id: Int! @doc(description: "Testimonial ID to delete")
+    ): DeleteTestimonialOutput @resolver(class: "Ashok\\Testimonial\\Model\\Resolver\\DeleteTestimonial") @doc(description: "Delete a testimonial")
+}
+
+type TestimonialsOutput @doc(description: "Testimonials output with pagination") {
+    total_count: Int! @doc(description: "Total number of testimonials")
+    items: [TestimonialOutput!]! @doc(description: "List of testimonials")
+}
+
+type TestimonialOutput @doc(description: "Testimonial data") {
+    testimonial_id: Int! @doc(description: "Testimonial ID")
+    customer_name: String! @doc(description: "Customer name")
+    customer_email: String @doc(description: "Customer email")
+    message: String! @doc(description: "Testimonial message")
+    rating: Int! @doc(description: "Rating (1-5)")
+    status: Int @doc(description: "Status (0=Disabled, 1=Enabled)")
+    created_at: String @doc(description: "Created date")
+    updated_at: String @doc(description: "Updated date")
+}
+
+input TestimonialFilterInput @doc(description: "Filter input for testimonials") {
+    customer_name: FilterTypeInput @doc(description: "Filter by customer name")
+    customer_email: FilterTypeInput @doc(description: "Filter by customer email")
+    rating: FilterTypeInput @doc(description: "Filter by rating")
+    status: FilterTypeInput @doc(description: "Filter by status")
+    created_at: FilterTypeInput @doc(description: "Filter by created date")
+}
+
+input FilterTypeInput @doc(description: "Filter type input") {
+    eq: String @doc(description: "Equal to")
+    in: [String] @doc(description: "In array")
+    from: String @doc(description: "From value (for ranges)")
+    to: String @doc(description: "To value (for ranges)")
+    like: String @doc(description: "Like pattern")
+}
+
+input AddTestimonialInput @doc(description: "Input for adding testimonial") {
+    customer_name: String! @doc(description: "Customer name")
+    customer_email: String! @doc(description: "Customer email")
+    message: String! @doc(description: "Testimonial message")
+    rating: Int! @doc(description: "Rating (1-5)")
+}
+
+type AddTestimonialOutput @doc(description: "Add testimonial response") {
+    testimonial_id: Int @doc(description: "Created testimonial ID")
+    status: String! @doc(description: "Response status")
+    message: String! @doc(description: "Response message")
+}
+
+input UpdateTestimonialInput @doc(description: "Input for updating testimonial") {
+    customer_name: String @doc(description: "Customer name")
+    customer_email: String @doc(description: "Customer email")
+    message: String @doc(description: "Testimonial message")
+    rating: Int @doc(description: "Rating (1-5)")
+    status: Int @doc(description: "Status (0=Disabled, 1=Enabled)")
+}
+
+type UpdateTestimonialOutput @doc(description: "Update testimonial response") {
+    testimonial_id: Int! @doc(description: "Updated testimonial ID")
+    status: String! @doc(description: "Response status")
+    message: String! @doc(description: "Response message")
+    testimonial: TestimonialOutput @doc(description: "Updated testimonial data")
+}
+
+type DeleteTestimonialOutput @doc(description: "Delete testimonial response") {
+    status: String! @doc(description: "Response status")
+    message: String! @doc(description: "Response message")
+}

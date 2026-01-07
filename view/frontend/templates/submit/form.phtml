@@ -1,0 +1,97 @@
+<?php
+/**
+ * @var \Ashok\Testimonial\Block\Submit\Form $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<div class="testimonial-submit-form">
+    <?php /* <h1><?= $escaper->escapeHtml(__('Submit Your Testimonial')) ?></h1> */ ?>
+    
+    <form action="<?= $escaper->escapeUrl($block->getFormAction()) ?>" 
+          method="post" 
+          id="testimonial-form" 
+          class="form testimonial">
+        
+        <?= $block->getBlockHtml('formkey') ?>
+        
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?= $escaper->escapeHtml(__('Your Information')) ?></span></legend>
+            
+            <div class="field name required">
+                <label class="label" for="customer_name">
+                    <span><?= $escaper->escapeHtml(__('Name')) ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" 
+                           name="customer_name" 
+                           id="customer_name" 
+                           class="input-text" 
+                           required 
+                           maxlength="255"
+                           data-validate="{required:true}"/>
+                </div>
+            </div>
+            
+            <div class="field email required">
+                <label class="label" for="customer_email">
+                    <span><?= $escaper->escapeHtml(__('Email')) ?></span>
+                </label>
+                <div class="control">
+                    <input type="email" 
+                           name="customer_email" 
+                           id="customer_email" 
+                           class="input-text" 
+                           required 
+                           maxlength="255"
+                           data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            
+            <div class="field rating_option required">
+                <label class="label" for="rating">
+                    <span><?= $escaper->escapeHtml(__('Rating')) ?></span>
+                </label>
+                <div class="control">
+                    <select name="rating" id="rating" class="select" required data-validate="{required:true}">
+                        <option value=""><?= $escaper->escapeHtml(__('Please select...')) ?></option>
+                        <?php foreach ($block->getRatingOptions() as $value => $label): ?>
+                            <option value="<?= $escaper->escapeHtmlAttr($value) ?>">
+                                <?= $escaper->escapeHtml($label) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="field message required">
+                <label class="label" for="message">
+                    <span><?= $escaper->escapeHtml(__('Your Testimonial')) ?></span>
+                </label>
+                <div class="control">
+                    <textarea name="message" 
+                              id="message" 
+                              class="input-text" 
+                              rows="5" 
+                              required
+                              data-validate="{required:true}"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary">
+                    <span><?= $escaper->escapeHtml(__('Submit Testimonial')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#testimonial-form": {
+        "validation": {}
+    }
+}
+</script>
