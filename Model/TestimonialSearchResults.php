@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Model;
+namespace Ashokkumar\Testimonial\Model;
 
-use Ashok\Testimonial\Api\Data\TestimonialSearchResultsInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialSearchResultsInterface;
 use Magento\Framework\Api\SearchResults;
 
 /**

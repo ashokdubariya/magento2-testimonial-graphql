@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Block\Adminhtml\Testimonial\Edit;
+namespace Ashokkumar\Testimonial\Block\Adminhtml\Testimonial\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 

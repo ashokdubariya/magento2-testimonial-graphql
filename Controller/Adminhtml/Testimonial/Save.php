@@ -1,14 +1,14 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Controller\Adminhtml\Testimonial;
+namespace Ashokkumar\Testimonial\Controller\Adminhtml\Testimonial;
 
-use Ashok\Testimonial\Api\Data\TestimonialInterfaceFactory;
-use Ashok\Testimonial\Api\TestimonialRepositoryInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialInterfaceFactory;
+use Ashokkumar\Testimonial\Api\TestimonialRepositoryInterface;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\Redirect;
@@ -24,7 +24,7 @@ class Save extends Action implements HttpPostActionInterface
     /**
      * Authorization level
      */
-    public const ADMIN_RESOURCE = 'Ashok_Testimonial::save';
+    public const ADMIN_RESOURCE = 'Ashokkumar_Testimonial::save';
 
     /**
      * @param Context $context
@@ -73,7 +73,7 @@ class Save extends Action implements HttpPostActionInterface
 
             $this->testimonialRepository->save($testimonial);
             $this->messageManager->addSuccessMessage(__('You saved the testimonial.'));
-            $this->dataPersistor->clear('ashok_testimonial');
+            $this->dataPersistor->clear('ashokkumar_testimonial');
 
             if ($this->getRequest()->getParam('back')) {
                 return $resultRedirect->setPath('*/*/edit', [
@@ -92,7 +92,7 @@ class Save extends Action implements HttpPostActionInterface
             );
         }
 
-        $this->dataPersistor->set('ashok_testimonial', $data);
+        $this->dataPersistor->set('ashokkumar_testimonial', $data);
         return $resultRedirect->setPath('*/*/edit', [
             'testimonial_id' => $id
         ]);

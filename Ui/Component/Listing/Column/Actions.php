@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Ui\Component\Listing\Column;
+namespace Ashokkumar\Testimonial\Ui\Component\Listing\Column;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;

@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Api\Data;
+namespace Ashokkumar\Testimonial\Api\Data;
 
 /**
  * Testimonial interface

@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <title>Customer Testimonials</title>
-        <css src="Ashok_Testimonial::css/testimonials.css"/>
+        <css src="Ashokkumar_Testimonial::css/testimonials.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Ashok\Testimonial\Block\TestimonialList" 
+            <block class="Ashokkumar\Testimonial\Block\TestimonialList" 
                    name="testimonial.list" 
-                   template="Ashok_Testimonial::list.phtml"/>
+                   template="Ashokkumar_Testimonial::list.phtml"/>
         </referenceContainer>
     </body>
 </page>

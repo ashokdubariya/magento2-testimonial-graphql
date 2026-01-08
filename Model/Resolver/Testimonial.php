@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Model\Resolver;
+namespace Ashokkumar\Testimonial\Model\Resolver;
 
-use Ashok\Testimonial\Model\Service\TestimonialService;
+use Ashokkumar\Testimonial\Model\Service\TestimonialService;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Exception\GraphQlInputException;

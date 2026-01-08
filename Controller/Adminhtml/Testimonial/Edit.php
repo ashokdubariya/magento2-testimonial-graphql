@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Controller\Adminhtml\Testimonial;
+namespace Ashokkumar\Testimonial\Controller\Adminhtml\Testimonial;
 
-use Ashok\Testimonial\Api\TestimonialRepositoryInterface;
+use Ashokkumar\Testimonial\Api\TestimonialRepositoryInterface;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\HttpGetActionInterface;
@@ -23,7 +23,7 @@ class Edit extends Action implements HttpGetActionInterface
     /**
      * Authorization level
      */
-    public const ADMIN_RESOURCE = 'Ashok_Testimonial::save';
+    public const ADMIN_RESOURCE = 'Ashokkumar_Testimonial::save';
 
     /**
      * @param Context $context
@@ -59,7 +59,7 @@ class Edit extends Action implements HttpGetActionInterface
 
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Ashok_Testimonial::testimonial');
+        $resultPage->setActiveMenu('Ashokkumar_Testimonial::testimonial');
         $resultPage->getConfig()->getTitle()->prepend(
             $id ? __('Edit Testimonial') : __('New Testimonial')
         );

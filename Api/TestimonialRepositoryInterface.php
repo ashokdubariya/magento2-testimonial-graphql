@@ -1,14 +1,14 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Api;
+namespace Ashokkumar\Testimonial\Api;
 
-use Ashok\Testimonial\Api\Data\TestimonialInterface;
-use Ashok\Testimonial\Api\Data\TestimonialSearchResultsInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialSearchResultsInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;

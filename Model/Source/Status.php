@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Model\Source;
+namespace Ashokkumar\Testimonial\Model\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 

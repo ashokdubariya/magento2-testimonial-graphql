@@ -1,19 +1,19 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Model;
+namespace Ashokkumar\Testimonial\Model;
 
-use Ashok\Testimonial\Api\Data\TestimonialInterface;
-use Ashok\Testimonial\Api\Data\TestimonialInterfaceFactory;
-use Ashok\Testimonial\Api\Data\TestimonialSearchResultsInterface;
-use Ashok\Testimonial\Api\Data\TestimonialSearchResultsInterfaceFactory;
-use Ashok\Testimonial\Api\TestimonialRepositoryInterface;
-use Ashok\Testimonial\Model\ResourceModel\Testimonial as TestimonialResource;
-use Ashok\Testimonial\Model\ResourceModel\Testimonial\CollectionFactory;
+use Ashokkumar\Testimonial\Api\Data\TestimonialInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialInterfaceFactory;
+use Ashokkumar\Testimonial\Api\Data\TestimonialSearchResultsInterface;
+use Ashokkumar\Testimonial\Api\Data\TestimonialSearchResultsInterfaceFactory;
+use Ashokkumar\Testimonial\Api\TestimonialRepositoryInterface;
+use Ashokkumar\Testimonial\Model\ResourceModel\Testimonial as TestimonialResource;
+use Ashokkumar\Testimonial\Model\ResourceModel\Testimonial\CollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;

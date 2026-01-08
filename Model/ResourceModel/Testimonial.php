@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 
 declare(strict_types=1);
 
-namespace Ashok\Testimonial\Model\ResourceModel;
+namespace Ashokkumar\Testimonial\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
@@ -17,7 +17,7 @@ class Testimonial extends AbstractDb
     /**
      * Table name
      */
-    private const TABLE_NAME = 'ashok_testimonial';
+    private const TABLE_NAME = 'ashokkumar_testimonial';
 
     /**
      * Primary key field name

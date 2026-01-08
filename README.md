@@ -1,6 +1,6 @@
 # Magento 2 Testimonial Module with GraphQL APIs
 
-This repository contains a **Testimonial** module with **GraphQL** APIs.
+This repository contains a **Testimonial** module with **GraphQL** APIs for managing customer testimonials with complete CRUD operations, admin panel, and frontend display.
 
 ## Key Features
 
@@ -20,7 +20,7 @@ This repository contains a **Testimonial** module with **GraphQL** APIs.
 
 ## Module Information
 
-- **Module Name:** `Ashok_Testimonial`
+- **Module Name:** `Ashokkumar_Testimonial`
 - **Module Type:** Magento 2 Custom Module
 - **API Type:** GraphQL
 
@@ -29,7 +29,7 @@ This repository contains a **Testimonial** module with **GraphQL** APIs.
 1. Copy the module to Magento:
 
 ```
-app/code/Ashok/Testimonial
+app/code/Ashokkumar/Testimonial
 ```
 
 2. Run Magento commands:
@@ -591,4 +591,4 @@ mutation {
 - **Admin Panel**: `/admin/testimonial/testimonial/index`
 - **Frontend Listing**: `/testimonial`
 - **Submit Form**: `/testimonial/submit`
-- **Module Location**: `/app/code/Ashok/Testimonial`
+- **Module Location**: `/app/code/Ashokkumar/Testimonial`

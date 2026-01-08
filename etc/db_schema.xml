@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Ashok. All rights reserved.
+ * Copyright © Ashokkumar. All rights reserved.
  */
 -->
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-    <table name="ashok_testimonial" resource="default" engine="innodb" comment="Ashok Testimonial Table">
+    <table name="ashokkumar_testimonial" resource="default" engine="innodb" comment="Ashokkumar Testimonial Table">
         <column xsi:type="int" name="testimonial_id" unsigned="true" nullable="false" identity="true" comment="Testimonial ID"/>
         <column xsi:type="varchar" name="customer_name" nullable="false" length="255" comment="Customer Name"/>
         <column xsi:type="varchar" name="customer_email" nullable="false" length="255" comment="Customer Email"/>
