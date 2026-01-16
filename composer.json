@@ -1,6 +1,6 @@
 {
     "name": "ashokdubariya/module-testimonial",
-    "description": "Magento 2 Testimonial Module with GraphQL API support and Hyva Theme compatibility for managing customer testimonials with complete CRUD operations, admin panel, and frontend display.",
+    "description": "Magento 2 Testimonial Module with GraphQL API support and Hyvä Theme compatibility for managing customer testimonials with complete CRUD operations, admin panel, and frontend display.",
     "type": "magento2-module",
     "version": "1.0.0",
     "license": "MIT",
@@ -27,7 +27,7 @@
         "magento/module-ui": "^101.2"
     },
     "suggest": {
-        "hyva-themes/magento2-default-theme": "Required for Hyva theme compatibility (^1.1)"
+        "hyva-themes/magento2-default-theme": "Required for Hyvä theme compatibility (^1.1)"
     },
     "autoload": {
         "files": [
